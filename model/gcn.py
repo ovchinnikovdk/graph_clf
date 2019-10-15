@@ -34,7 +34,7 @@ class GCN(torch.nn.Module):
         self.in_features = in_features
         self.out_features = out_features
         self.n_hidden = n_hidden
-        self.pad_size = 64
+        self.pad_size = 128
 
         self.gconv1 = GraphConv(in_features, n_hidden)
         self.relu = torch.nn.ReLU()

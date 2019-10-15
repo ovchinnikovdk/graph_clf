@@ -36,14 +36,14 @@ def main():
 
     # experiment setup
     logdir = "./logdir/" + 'gcn'
-    num_epochs = 30
+    num_epochs = 10
 
     # data
     loaders = collections.OrderedDict()
     train_dataset = GraphDataset('data/train/')
     val_dataset = GraphDataset('data/test/')
-    loaders["train"] = DataLoader(train_dataset, shuffle=True, num_workers=4, batch_size=64)
-    loaders["valid"] = DataLoader(val_dataset, shuffle=False, num_workers=4, batch_size=64)
+    loaders["train"] = DataLoader(train_dataset, shuffle=True, num_workers=4, batch_size=96)
+    loaders["valid"] = DataLoader(val_dataset, shuffle=False, num_workers=4, batch_size=96)
 
     train(num_epochs, model, loaders, logdir)
 
